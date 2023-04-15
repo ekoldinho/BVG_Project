@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="63.611">
+    <testcase classname="User logins to BVG" name="user can login with valid credentials" time="14.64">
+        <failure message="expected:&lt;[Herzlich Willkommen in deinem BVG-Konto]!&gt; but was:&lt;[welcome to your BVG account]!&gt;" type="org.junit.ComparisonFailure">
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user clicks on email input box and enter email "bvgtester1@gmail.com"..passed
+And user clicks to password input box and enter password "juniorTester123.".passed
+And user clicks on 'Sign In' button or hit enter key........................passed
+And user accepts cookies....................................................passed
+Then user verifies landing on account page..................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<[Herzlich Willkommen in deinem BVG-Konto]!> but was:<[welcome to your BVG account]!>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.bvg.step_definitions.LoginStepDefinitions.userVerifiesLandingOnAccountPage(LoginStepDefinitions.java:55)
+	at ✽.user verifies landing on account page(file:///C:/Users/aliek/IdeaProjects/BVG_Project/src/test/resources/features/login.feature:14)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="User logins to BVG" name="user cannot login with invalid credentials" time="10.285">
+        <system-out>
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user inserts the following invalid username "invalid"..................passed
+And user inserts the following invalid password "invalid"...................passed
+And user clicks on 'Sign In' button or hit enter key........................passed
+Then user verifies the following warning message "Ungültiger Benutzername oder Passwort.".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User logins to BVG" name="user cannot login with no input" time="9.969">
+        <failure message="expected:&lt;[E-Mail und Passwort erforderlich]&gt; but was:&lt;[Ungültiger Benutzername oder Passwort.]&gt;" type="org.junit.ComparisonFailure">
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user clicks on 'Sign In' button or hit enter key.......................passed
+Then user verifies the following warning message or any equivalent message "E-Mail und Passwort erforderlich".failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<[E-Mail und Passwort erforderlich]> but was:<[Ungültiger Benutzername oder Passwort.]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.bvg.step_definitions.LoginStepDefinitions.userVerifiesTheFollowingWarningMessageOrAnyEquivalentMessage(LoginStepDefinitions.java:80)
+	at ✽.user verifies the following warning message or any equivalent message "E-Mail und Passwort erforderlich"(file:///C:/Users/aliek/IdeaProjects/BVG_Project/src/test/resources/features/login.feature:26)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="User logins to BVG" name="user can see password as dots" time="9.238">
+        <system-out>
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user enters email "aliekremuyar55@gmail.com" and password "zxv10W300.".passed
+Then password must be seen as dots..........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User logins to BVG" name="user can see password explicitly" time="9.681">
+        <system-out>
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user enters email "aliekremuyar55@gmail.com" and password "zxv10W300.".passed
+And user clicks on the eye button...........................................passed
+Then user should see the password explicitly................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User logins to BVG" name="user should be able to reset password if forgotten" time="9.496">
+        <system-out>
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user clicks on 'Passwort Vergessen?' link..............................passed
+Then user is directed to the website to reset password......................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
