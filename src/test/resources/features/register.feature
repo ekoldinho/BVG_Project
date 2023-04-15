@@ -1,0 +1,130 @@
+Feature: User avoids mistakes while registering to BVG
+
+  Background:
+    Given user is on login page
+    Given user hovers over language preference and selects Deutsch
+
+
+  Scenario: User fails to register without inserting 'Vorname'
+    When user clicks on 'Registirieren'
+    And user verifies landing on 'Registrierung' page
+    And user inserts 'Nachname' "Uyar"
+    And user inserts unregistered 'E-Mail' "bvgtester2@gmail.com"
+    And user inserts 'Passwort' "juniorTester123."
+    And user inserts the same password to 'Passwort Bestätigen' "juniorTester123."
+    Then user is warned to insert 'Vorname' "Bitte gib eine Vorname ein."
+
+  Scenario: User fails to register without inserting 'Nachname'
+    When user clicks on 'Registirieren'
+    And user verifies landing on 'Registrierung' page
+    And user inserts 'Vorname' "Ali Ekrem"
+    And user inserts unregistered 'E-Mail' "bvgtester2@gmail.com"
+    And user inserts 'Passwort' "juniorTester123."
+    And user inserts the same password to 'Passwort Bestätigen' "juniorTester123."
+    Then user is warned to insert 'Nachname' "Bitte gib eine Nachname ein."
+
+  Scenario: User fails to register without inserting 'E-Mail'
+    When user clicks on 'Registirieren'
+    And user verifies landing on 'Registrierung' page
+    And user inserts 'Vorname' "Ali Ekrem"
+    And user inserts 'Nachname' "Uyar"
+    And user inserts 'Passwort' "juniorTester123."
+    And user inserts the same password to 'Passwort Bestätigen' "juniorTester123."
+    Then user is warned to insert 'E-Mail' through following message "Bitte gib eine E-Mail-Adresse ein."
+
+  Scenario: User fails to register without inserting 'Passwort'
+    When user clicks on 'Registirieren'
+    And user verifies landing on 'Registrierung' page
+    And user inserts 'Vorname' "Ali Ekrem"
+    And user inserts 'Nachname' "Uyar"
+    And user inserts unregistered 'E-Mail' "bvgtester2@gmail.com"
+    Then user is warned to insert 'Passwort' through following message "Bitte gib ein Passwort ein."
+
+  Scenario: User fails to register by not confirming 'Passwort'
+    When user clicks on 'Registirieren'
+    And user verifies landing on 'Registrierung' page
+    And user inserts 'Vorname' "Ali Ekrem"
+    And user inserts 'Nachname' "Uyar"
+    And user inserts unregistered 'E-Mail' "bvgtester2@gmail.com"
+    And user inserts 'Passwort' "juniorTester123."
+    Then user is warned to confirm password through following message "Die Passwortbestätigung ist nicht identisch."
+
+  Scenario: User fails to register by inserting non-identical 'Passwort'
+    When user clicks on 'Registirieren'
+    And user verifies landing on 'Registrierung' page
+    And user inserts 'Vorname' "Ali Ekrem"
+    And user inserts 'Nachname' "Uyar"
+    And user inserts unregistered 'E-Mail' "bvgtester2@gmail.com"
+    And user inserts 'Passwort' "juniorTester123."
+    And user inserts non-identical password to 'Passwort Bestätigen' "juniorTester123"
+    Then user is warned to insert an identical password through following message "Die Passwortbestätigung ist nicht identisch."
+
+  Scenario: User fails to register by inserting existing 'E-Mail'
+    When user clicks on 'Registirieren'
+    And user verifies landing on 'Registrierung' page
+    And user inserts 'Vorname' "Ali Ekrem"
+    And user inserts 'Nachname' "Uyar"
+    And user inserts registered 'E-Mail' "aliekremuyar55@gmail.com"
+    And user inserts 'Passwort' "juniorTester123."
+    And user inserts the same password to 'Passwort Bestätigen' "juniorTester123."
+    Then user is warned to insert unregistered 'E-Mail' through following message "E-Mail existiert bereits."
+
+  Scenario: User fails to register by inserting invalid 'Passwort'
+    When user clicks on 'Registirieren'
+    And user verifies landing on 'Registrierung' page
+    And user inserts 'Vorname' "Ali Ekrem"
+    And user inserts 'Nachname' "Uyar"
+    And user inserts unregistered 'E-Mail' "bvgtester2@gmail.com"
+    And user inserts 'Passwort' "juniortester"
+    And user inserts the same password to 'Passwort Bestätigen' "tester"
+    Then user is warned to insert valid password with at least one special character through following message "Ungültiges Passwort: Es muss mindestens 1 Sonderzeichen beinhalten."
+
+  Scenario: User fails to register by inserting invalid 'Passwort'
+    When user clicks on 'Registirieren'
+    And user verifies landing on 'Registrierung' page
+    And user inserts 'Vorname' "Ali Ekrem"
+    And user inserts 'Nachname' "Uyar"
+    And user inserts unregistered 'E-Mail' "bvgtester2@gmail.com"
+    And user inserts 'Passwort' "juniortester."
+    And user inserts the same password to 'Passwort Bestätigen' "tester."
+    Then user is warned to insert valid password with at least one upper-case letter through following message "Ungültiges Passwort: Es muss mindestens 1 Großbuchstaben beinhalten."
+
+  Scenario: User fails to register by inserting invalid 'Passwort'
+    When user clicks on 'Registirieren'
+    And user verifies landing on 'Registrierung' page
+    And user inserts 'Vorname' "Ali Ekrem"
+    And user inserts 'Nachname' "Uyar"
+    And user inserts unregistered 'E-Mail' "bvgtester2@gmail.com"
+    And user inserts 'Passwort' "juniortester."
+    And user inserts the same password to 'Passwort Bestätigen' "Tester."
+    Then user is warned to insert valid password with at least 8 characters through following message "Ungültiges Passwort: Es muss mindestens 8 Zeichen lang sein."
+
+  Scenario: User fails to register by inserting invalid 'Passwort'
+    When user clicks on 'Registirieren'
+    And user verifies landing on 'Registrierung' page
+    And user inserts 'Vorname' "Ali Ekrem"
+    And user inserts 'Nachname' "Uyar"
+    And user inserts unregistered 'E-Mail' "bvgtester2@gmail.com"
+    And user inserts 'Passwort' "juniortester."
+    And user inserts the same password to 'Passwort Bestätigen' "juniorTester."
+    Then user is warned to insert valid password with at least 1 digit through following message "Ungültiges Passwort: Es muss mindestens 1 Ziffer(n) beinhalten."
+
+  Scenario: User fails to register by inserting invalid 'Passwort'
+    When user clicks on 'Registirieren'
+    And user verifies landing on 'Registrierung' page
+    And user inserts 'Vorname' "Ali Ekrem"
+    And user inserts 'Nachname' "Uyar"
+    And user inserts unregistered 'E-Mail' "bvgtester2@gmail.com"
+    And user inserts 'Passwort' "juniortester."
+    And user inserts the same password to 'Passwort Bestätigen' "JUNIORTESTER123."
+    Then user is warned to insert valid password with at least 1 lower-case letter through following message "Ungültiges Passwort: Es muss mindestens 1 Kleinbuchstaben beinhalten."
+
+  Scenario: User fails to register by inserting existing 'E-Mail', invalid and non-identical 'Passwort'
+    When user clicks on 'Registirieren'
+    And user verifies landing on 'Registrierung' page
+    And user inserts 'Vorname' "Ali Ekrem"
+    And user inserts 'Nachname' "Uyar"
+    And user inserts registered 'E-Mail' "aliekremuyar55@gmail.com"
+    And user inserts 'Passwort' "juniortester"
+    And user inserts the same password to 'Passwort Bestätigen' "juniorTester123."
+    Then user is warned to insert unregistered 'E-Mail', valid password and confirm the password through following messages "E-Mail existiert bereits." "Ungültiges Passwort: Es muss mindestens 1 Sonderzeichen beinhalten." "Die Passwortbestätigung ist nicht identisch."
