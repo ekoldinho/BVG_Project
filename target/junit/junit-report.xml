@@ -1,76 +1,220 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="63.611">
-    <testcase classname="User logins to BVG" name="user can login with valid credentials" time="14.64">
-        <failure message="expected:&lt;[Herzlich Willkommen in deinem BVG-Konto]!&gt; but was:&lt;[welcome to your BVG account]!&gt;" type="org.junit.ComparisonFailure">
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="144.456">
+    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register without inserting 'Vorname'" time="12.854">
+        <failure message="" type="java.lang.AssertionError">
             <![CDATA[Given user is on login page.................................................passed
 Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on email input box and enter email "bvgtester1@gmail.com"..passed
-And user clicks to password input box and enter password "juniorTester123.".passed
-And user clicks on 'Sign In' button or hit enter key........................passed
-And user accepts cookies....................................................passed
-Then user verifies landing on account page..................................failed
+When user clicks on Registirieren button....................................passed
+And user verifies landing on Registrierung page.............................passed
+And user inserts Nachname "Uyar"............................................passed
+And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
+And user inserts Passwort "juniorTester123."................................passed
+And user inserts the same password to Passwort Bestätigen "juniorTester123.".passed
+And user clicks on Jetzt Registrieren button................................passed
+Then user is warned to insert Vorname "Bitte gib eine Vorname ein.".........failed
 
 StackTrace:
-org.junit.ComparisonFailure: expected:<[Herzlich Willkommen in deinem BVG-Konto]!> but was:<[welcome to your BVG account]!>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.bvg.step_definitions.LoginStepDefinitions.userVerifiesLandingOnAccountPage(LoginStepDefinitions.java:55)
-	at ✽.user verifies landing on account page(file:///C:/Users/aliek/IdeaProjects/BVG_Project/src/test/resources/features/login.feature:14)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.bvg.step_definitions.RegistrationStepDefinitions.userIsWarnedToInsertVorname(RegistrationStepDefinitions.java:53)
+	at ✽.user is warned to insert Vorname "Bitte gib eine Vorname ein."(file:///C:/Users/aliek/IdeaProjects/BVG_Project/src/test/resources/features/register.feature:17)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="User logins to BVG" name="user cannot login with invalid credentials" time="10.285">
-        <system-out>
+    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register without inserting 'Nachname'" time="10.502">
+        <failure message="" type="java.lang.AssertionError">
             <![CDATA[Given user is on login page.................................................passed
 Given user hovers over language preference and selects Deutsch..............passed
-When user inserts the following invalid username "invalid"..................passed
-And user inserts the following invalid password "invalid"...................passed
-And user clicks on 'Sign In' button or hit enter key........................passed
-Then user verifies the following warning message "Ungültiger Benutzername oder Passwort.".passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="User logins to BVG" name="user cannot login with no input" time="9.969">
-        <failure message="expected:&lt;[E-Mail und Passwort erforderlich]&gt; but was:&lt;[Ungültiger Benutzername oder Passwort.]&gt;" type="org.junit.ComparisonFailure">
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on 'Sign In' button or hit enter key.......................passed
-Then user verifies the following warning message or any equivalent message "E-Mail und Passwort erforderlich".failed
+When user clicks on Registirieren button....................................passed
+And user verifies landing on Registrierung page.............................passed
+And user inserts Vorname "Ali Ekrem"........................................passed
+And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
+And user inserts Passwort "juniorTester123."................................passed
+And user inserts the same password to Passwort Bestätigen "juniorTester123.".passed
+And user clicks on Jetzt Registrieren button................................passed
+Then user is warned to insert Nachname "Bitte gib eine Nachname ein.".......failed
 
 StackTrace:
-org.junit.ComparisonFailure: expected:<[E-Mail und Passwort erforderlich]> but was:<[Ungültiger Benutzername oder Passwort.]>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.bvg.step_definitions.LoginStepDefinitions.userVerifiesTheFollowingWarningMessageOrAnyEquivalentMessage(LoginStepDefinitions.java:80)
-	at ✽.user verifies the following warning message or any equivalent message "E-Mail und Passwort erforderlich"(file:///C:/Users/aliek/IdeaProjects/BVG_Project/src/test/resources/features/login.feature:26)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.bvg.step_definitions.RegistrationStepDefinitions.userIsWarnedToInsertNachname(RegistrationStepDefinitions.java:63)
+	at ✽.user is warned to insert Nachname "Bitte gib eine Nachname ein."(file:///C:/Users/aliek/IdeaProjects/BVG_Project/src/test/resources/features/register.feature:27)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="User logins to BVG" name="user can see password as dots" time="9.238">
+    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register without inserting 'E-Mail'" time="10.481">
         <system-out>
             <![CDATA[Given user is on login page.................................................passed
 Given user hovers over language preference and selects Deutsch..............passed
-When user enters email "aliekremuyar55@gmail.com" and password "zxv10W300.".passed
-Then password must be seen as dots..........................................passed
+When user clicks on Registirieren button....................................passed
+And user verifies landing on Registrierung page.............................passed
+And user inserts Vorname "Ali Ekrem"........................................passed
+And user inserts Nachname "Uyar"............................................passed
+And user inserts Passwort "juniorTester123."................................passed
+And user inserts the same password to Passwort Bestätigen "juniorTester123.".passed
+And user clicks on Jetzt Registrieren button................................passed
+Then user is warned to insert E-Mail through following message "Bitte gib eine E-Mail-Adresse ein.".passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="User logins to BVG" name="user can see password explicitly" time="9.681">
+    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register without inserting 'Passwort'" time="10.273">
         <system-out>
             <![CDATA[Given user is on login page.................................................passed
 Given user hovers over language preference and selects Deutsch..............passed
-When user enters email "aliekremuyar55@gmail.com" and password "zxv10W300.".passed
-And user clicks on the eye button...........................................passed
-Then user should see the password explicitly................................passed
+When user clicks on Registirieren button....................................passed
+And user verifies landing on Registrierung page.............................passed
+And user inserts Vorname "Ali Ekrem"........................................passed
+And user inserts Nachname "Uyar"............................................passed
+And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
+And user clicks on Jetzt Registrieren button................................passed
+Then user is warned to insert Passwort through following message "Bitte gib ein Passwort ein.".passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="User logins to BVG" name="user should be able to reset password if forgotten" time="9.496">
+    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by not confirming 'Passwort'" time="10.598">
         <system-out>
             <![CDATA[Given user is on login page.................................................passed
 Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on 'Passwort Vergessen?' link..............................passed
-Then user is directed to the website to reset password......................passed
+When user clicks on Registirieren button....................................passed
+And user verifies landing on Registrierung page.............................passed
+And user inserts Vorname "Ali Ekrem"........................................passed
+And user inserts Nachname "Uyar"............................................passed
+And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
+And user inserts Passwort "juniorTester123."................................passed
+And user clicks on Jetzt Registrieren button................................passed
+Then user is warned to confirm password through following message "Die Passwortbestätigung ist nicht identisch.".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting non-identical 'Passwort'" time="12.316">
+        <system-out>
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user clicks on Registirieren button....................................passed
+And user verifies landing on Registrierung page.............................passed
+And user inserts Vorname "Ali Ekrem"........................................passed
+And user inserts Nachname "Uyar"............................................passed
+And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
+And user inserts Passwort "juniorTester123."................................passed
+And user inserts non-identical password to Passwort Bestätigen "juniorTester123".passed
+And user clicks on Jetzt Registrieren button................................passed
+Then user is warned to insert an identical password through following message "Die Passwortbestätigung ist nicht identisch.".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting existing 'E-Mail'" time="11.492">
+        <system-out>
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user clicks on Registirieren button....................................passed
+And user verifies landing on Registrierung page.............................passed
+And user inserts Vorname "Ali Ekrem"........................................passed
+And user inserts Nachname "Uyar"............................................passed
+And user inserts registered E-Mail "aliekremuyar55@gmail.com"...............passed
+And user inserts Passwort "juniorTester123."................................passed
+And user inserts the same password to Passwort Bestätigen "juniorTester123.".passed
+And user clicks on Jetzt Registrieren button................................passed
+Then user is warned to insert unregistered E-Mail through following message "E-Mail existiert bereits.".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting invalid 'Passwort'" time="10.433">
+        <system-out>
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user clicks on Registirieren button....................................passed
+And user verifies landing on Registrierung page.............................passed
+And user inserts Vorname "Ali Ekrem"........................................passed
+And user inserts Nachname "Uyar"............................................passed
+And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
+And user inserts invalidPasswortOne "tester"................................passed
+And user inserts the same password to Passwort Bestätigen "tester"..........passed
+And user clicks on Jetzt Registrieren button................................passed
+Then user is warned to insert valid password with at least one special character through following message "Ungültiges Passwort: Es muss mindestens 1 Sonderzeichen beinhalten.".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting invalid 'Passwort' 2" time="12.017">
+        <system-out>
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user clicks on Registirieren button....................................passed
+And user verifies landing on Registrierung page.............................passed
+And user inserts Vorname "Ali Ekrem"........................................passed
+And user inserts Nachname "Uyar"............................................passed
+And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
+And user inserts invalidPasswortTwo "tester."...............................passed
+And user inserts the same password to Passwort Bestätigen "tester.".........passed
+And user clicks on Jetzt Registrieren button................................passed
+Then user is warned to insert valid password with at least one upper-case letter through following message "Ungültiges Passwort: Es muss mindestens 1 Großbuchstaben beinhalten.".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting invalid 'Passwort' 3" time="10.66">
+        <system-out>
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user clicks on Registirieren button....................................passed
+And user verifies landing on Registrierung page.............................passed
+And user inserts Vorname "Ali Ekrem"........................................passed
+And user inserts Nachname "Uyar"............................................passed
+And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
+And user inserts invalidPasswortThree "Tester.".............................passed
+And user inserts the same password to Passwort Bestätigen "Tester.".........passed
+And user clicks on Jetzt Registrieren button................................passed
+Then user is warned to insert valid password with at least eight characters through following message "Ungültiges Passwort: Es muss mindestens 8 Zeichen lang sein.".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting invalid 'Passwort' 4" time="10.417">
+        <system-out>
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user clicks on Registirieren button....................................passed
+And user verifies landing on Registrierung page.............................passed
+And user inserts Vorname "Ali Ekrem"........................................passed
+And user inserts Nachname "Uyar"............................................passed
+And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
+And user inserts invalidPasswortFour "juniorTester."........................passed
+And user inserts the same password to Passwort Bestätigen "juniorTester."...passed
+And user clicks on Jetzt Registrieren button................................passed
+Then user is warned to insert valid password with at least one digit through following message "Ungültiges Passwort: Es muss mindestens 1 Ziffer(n) beinhalten.".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting invalid 'Passwort' 5" time="11.21">
+        <system-out>
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user clicks on Registirieren button....................................passed
+And user verifies landing on Registrierung page.............................passed
+And user inserts Vorname "Ali Ekrem"........................................passed
+And user inserts Nachname "Uyar"............................................passed
+And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
+And user inserts invalidPasswortFive "JUNIORTESTER123.".....................passed
+And user inserts the same password to Passwort Bestätigen "JUNIORTESTER123.".passed
+And user clicks on Jetzt Registrieren button................................passed
+Then user is warned to insert valid password with at least one lower-case letter through following message "Ungültiges Passwort: Es muss mindestens 1 Kleinbuchstaben beinhalten.".passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting existing 'E-Mail', invalid and non-identical 'Passwort'" time="10.701">
+        <system-out>
+            <![CDATA[Given user is on login page.................................................passed
+Given user hovers over language preference and selects Deutsch..............passed
+When user clicks on Registirieren button....................................passed
+And user verifies landing on Registrierung page.............................passed
+And user inserts Vorname "Ali Ekrem"........................................passed
+And user inserts Nachname "Uyar"............................................passed
+And user inserts registered E-Mail "aliekremuyar55@gmail.com"...............passed
+And user inserts invalidPasswortSix "tester"................................passed
+And user inserts the same password to Passwort Bestätigen "juniorTester123.".passed
+And user clicks on Jetzt Registrieren button................................passed
+Then user is warned to insert unregistered E-Mail, valid password and confirm the password through following messages "E-Mail existiert bereits." "Ungültiges Passwort: Es muss mindestens 1 Sonderzeichen beinhalten." "Die Passwortbestätigung ist nicht identisch.".passed
 ]]>
         </system-out>
     </testcase>
