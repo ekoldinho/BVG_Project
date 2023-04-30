@@ -1,221 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="144.456">
-    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register without inserting 'Vorname'" time="12.854">
-        <failure message="" type="java.lang.AssertionError">
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on Registirieren button....................................passed
-And user verifies landing on Registrierung page.............................passed
-And user inserts Nachname "Uyar"............................................passed
-And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
-And user inserts Passwort "juniorTester123."................................passed
-And user inserts the same password to Passwort Bestätigen "juniorTester123.".passed
-And user clicks on Jetzt Registrieren button................................passed
-Then user is warned to insert Vorname "Bitte gib eine Vorname ein.".........failed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="23.702">
+    <testcase classname="User searches for connections throughout Berlin" name="User can list connections without SBahn options after inserting valid addresses in Berlin" time="23.477">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class='lyr_atomOptionInfoTitle']&quot;}&#10;  (Session info: chrome=112.0.5615.138)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-62MEQHV', ip: '192.168.0.39', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\aliek\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60356}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 962dbed341c592b092a5c9f61de38b59&#10;*** Element info: {Using=xpath, value=//span[@class='lyr_atomOptionInfoTitle']}" type="org.openqa.selenium.NoSuchElementException">
+            <![CDATA[Given user is on main page..................................................passed
+When User inserts the following start address "Holzmarkt Straße 15-17"......passed
+And User inserts the following ziel address "Europaplatz 1".................passed
+And User opens Erweiterte list..............................................passed
+And User deselects SBahn....................................................passed
+And User closes Erweiterte list.............................................passed
+And User clicks on Verbindung Finden button.................................passed
+Then User verifies the possible connections without SBahn lines.............failed
 
 StackTrace:
-java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at com.bvg.step_definitions.RegistrationStepDefinitions.userIsWarnedToInsertVorname(RegistrationStepDefinitions.java:53)
-	at ✽.user is warned to insert Vorname "Bitte gib eine Vorname ein."(file:///C:/Users/aliek/IdeaProjects/BVG_Project/src/test/resources/features/register.feature:17)
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='lyr_atomOptionInfoTitle']"}
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-62MEQHV', ip: '192.168.0.39', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\aliek\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60356}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 962dbed341c592b092a5c9f61de38b59
+*** Element info: {Using=xpath, value=//span[@class='lyr_atomOptionInfoTitle']}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy20.getText(Unknown Source)
+	at com.bvg.step_definitions.ConnectionsStepDefinitions.userVerifiesThePossibleConnectionsWithoutSBahnLines(ConnectionsStepDefinitions.java:88)
+	at ✽.User verifies the possible connections without SBahn lines(file:///C:/Users/aliek/IdeaProjects/BVG_Project/src/test/resources/features/connections.feature:21)
 ]]>
         </failure>
-    </testcase>
-    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register without inserting 'Nachname'" time="10.502">
-        <failure message="" type="java.lang.AssertionError">
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on Registirieren button....................................passed
-And user verifies landing on Registrierung page.............................passed
-And user inserts Vorname "Ali Ekrem"........................................passed
-And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
-And user inserts Passwort "juniorTester123."................................passed
-And user inserts the same password to Passwort Bestätigen "juniorTester123.".passed
-And user clicks on Jetzt Registrieren button................................passed
-Then user is warned to insert Nachname "Bitte gib eine Nachname ein.".......failed
-
-StackTrace:
-java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at com.bvg.step_definitions.RegistrationStepDefinitions.userIsWarnedToInsertNachname(RegistrationStepDefinitions.java:63)
-	at ✽.user is warned to insert Nachname "Bitte gib eine Nachname ein."(file:///C:/Users/aliek/IdeaProjects/BVG_Project/src/test/resources/features/register.feature:27)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register without inserting 'E-Mail'" time="10.481">
-        <system-out>
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on Registirieren button....................................passed
-And user verifies landing on Registrierung page.............................passed
-And user inserts Vorname "Ali Ekrem"........................................passed
-And user inserts Nachname "Uyar"............................................passed
-And user inserts Passwort "juniorTester123."................................passed
-And user inserts the same password to Passwort Bestätigen "juniorTester123.".passed
-And user clicks on Jetzt Registrieren button................................passed
-Then user is warned to insert E-Mail through following message "Bitte gib eine E-Mail-Adresse ein.".passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register without inserting 'Passwort'" time="10.273">
-        <system-out>
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on Registirieren button....................................passed
-And user verifies landing on Registrierung page.............................passed
-And user inserts Vorname "Ali Ekrem"........................................passed
-And user inserts Nachname "Uyar"............................................passed
-And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
-And user clicks on Jetzt Registrieren button................................passed
-Then user is warned to insert Passwort through following message "Bitte gib ein Passwort ein.".passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by not confirming 'Passwort'" time="10.598">
-        <system-out>
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on Registirieren button....................................passed
-And user verifies landing on Registrierung page.............................passed
-And user inserts Vorname "Ali Ekrem"........................................passed
-And user inserts Nachname "Uyar"............................................passed
-And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
-And user inserts Passwort "juniorTester123."................................passed
-And user clicks on Jetzt Registrieren button................................passed
-Then user is warned to confirm password through following message "Die Passwortbestätigung ist nicht identisch.".passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting non-identical 'Passwort'" time="12.316">
-        <system-out>
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on Registirieren button....................................passed
-And user verifies landing on Registrierung page.............................passed
-And user inserts Vorname "Ali Ekrem"........................................passed
-And user inserts Nachname "Uyar"............................................passed
-And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
-And user inserts Passwort "juniorTester123."................................passed
-And user inserts non-identical password to Passwort Bestätigen "juniorTester123".passed
-And user clicks on Jetzt Registrieren button................................passed
-Then user is warned to insert an identical password through following message "Die Passwortbestätigung ist nicht identisch.".passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting existing 'E-Mail'" time="11.492">
-        <system-out>
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on Registirieren button....................................passed
-And user verifies landing on Registrierung page.............................passed
-And user inserts Vorname "Ali Ekrem"........................................passed
-And user inserts Nachname "Uyar"............................................passed
-And user inserts registered E-Mail "aliekremuyar55@gmail.com"...............passed
-And user inserts Passwort "juniorTester123."................................passed
-And user inserts the same password to Passwort Bestätigen "juniorTester123.".passed
-And user clicks on Jetzt Registrieren button................................passed
-Then user is warned to insert unregistered E-Mail through following message "E-Mail existiert bereits.".passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting invalid 'Passwort'" time="10.433">
-        <system-out>
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on Registirieren button....................................passed
-And user verifies landing on Registrierung page.............................passed
-And user inserts Vorname "Ali Ekrem"........................................passed
-And user inserts Nachname "Uyar"............................................passed
-And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
-And user inserts invalidPasswortOne "tester"................................passed
-And user inserts the same password to Passwort Bestätigen "tester"..........passed
-And user clicks on Jetzt Registrieren button................................passed
-Then user is warned to insert valid password with at least one special character through following message "Ungültiges Passwort: Es muss mindestens 1 Sonderzeichen beinhalten.".passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting invalid 'Passwort' 2" time="12.017">
-        <system-out>
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on Registirieren button....................................passed
-And user verifies landing on Registrierung page.............................passed
-And user inserts Vorname "Ali Ekrem"........................................passed
-And user inserts Nachname "Uyar"............................................passed
-And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
-And user inserts invalidPasswortTwo "tester."...............................passed
-And user inserts the same password to Passwort Bestätigen "tester.".........passed
-And user clicks on Jetzt Registrieren button................................passed
-Then user is warned to insert valid password with at least one upper-case letter through following message "Ungültiges Passwort: Es muss mindestens 1 Großbuchstaben beinhalten.".passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting invalid 'Passwort' 3" time="10.66">
-        <system-out>
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on Registirieren button....................................passed
-And user verifies landing on Registrierung page.............................passed
-And user inserts Vorname "Ali Ekrem"........................................passed
-And user inserts Nachname "Uyar"............................................passed
-And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
-And user inserts invalidPasswortThree "Tester.".............................passed
-And user inserts the same password to Passwort Bestätigen "Tester.".........passed
-And user clicks on Jetzt Registrieren button................................passed
-Then user is warned to insert valid password with at least eight characters through following message "Ungültiges Passwort: Es muss mindestens 8 Zeichen lang sein.".passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting invalid 'Passwort' 4" time="10.417">
-        <system-out>
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on Registirieren button....................................passed
-And user verifies landing on Registrierung page.............................passed
-And user inserts Vorname "Ali Ekrem"........................................passed
-And user inserts Nachname "Uyar"............................................passed
-And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
-And user inserts invalidPasswortFour "juniorTester."........................passed
-And user inserts the same password to Passwort Bestätigen "juniorTester."...passed
-And user clicks on Jetzt Registrieren button................................passed
-Then user is warned to insert valid password with at least one digit through following message "Ungültiges Passwort: Es muss mindestens 1 Ziffer(n) beinhalten.".passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting invalid 'Passwort' 5" time="11.21">
-        <system-out>
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on Registirieren button....................................passed
-And user verifies landing on Registrierung page.............................passed
-And user inserts Vorname "Ali Ekrem"........................................passed
-And user inserts Nachname "Uyar"............................................passed
-And user inserts unregistered E-Mail "bvgtester2@gmail.com".................passed
-And user inserts invalidPasswortFive "JUNIORTESTER123.".....................passed
-And user inserts the same password to Passwort Bestätigen "JUNIORTESTER123.".passed
-And user clicks on Jetzt Registrieren button................................passed
-Then user is warned to insert valid password with at least one lower-case letter through following message "Ungültiges Passwort: Es muss mindestens 1 Kleinbuchstaben beinhalten.".passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="User avoids mistakes while registering to BVG" name="User fails to register by inserting existing 'E-Mail', invalid and non-identical 'Passwort'" time="10.701">
-        <system-out>
-            <![CDATA[Given user is on login page.................................................passed
-Given user hovers over language preference and selects Deutsch..............passed
-When user clicks on Registirieren button....................................passed
-And user verifies landing on Registrierung page.............................passed
-And user inserts Vorname "Ali Ekrem"........................................passed
-And user inserts Nachname "Uyar"............................................passed
-And user inserts registered E-Mail "aliekremuyar55@gmail.com"...............passed
-And user inserts invalidPasswortSix "tester"................................passed
-And user inserts the same password to Passwort Bestätigen "juniorTester123.".passed
-And user clicks on Jetzt Registrieren button................................passed
-Then user is warned to insert unregistered E-Mail, valid password and confirm the password through following messages "E-Mail existiert bereits." "Ungültiges Passwort: Es muss mindestens 1 Sonderzeichen beinhalten." "Die Passwortbestätigung ist nicht identisch.".passed
-]]>
-        </system-out>
     </testcase>
 </testsuite>
