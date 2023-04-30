@@ -1,4 +1,3 @@
-@wip
 Feature: User avoids mistakes while registering to BVG
 
   Background:
