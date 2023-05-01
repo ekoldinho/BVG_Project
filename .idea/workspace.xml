@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad3695b6-3a6c-41f2-9f16-637672e3ee62" name="Changes" comment="connections feature updated and step definitions implemented">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/bvg/pages/ConnectionsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bvg/pages/ConnectionsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/bvg/step_definitions/ConnectionsStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bvg/step_definitions/ConnectionsStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/connections.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/connections.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/junit/junit-report.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/junit/junit-report.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/bvg/pages/ConnectionsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/bvg/pages/ConnectionsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/connections.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/connections.feature" afterDir="false" />
+    <list default="true" id="ad3695b6-3a6c-41f2-9f16-637672e3ee62" name="Changes" comment="connections feature updated">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +93,7 @@
       <workItem from="1682861248280" duration="8787000" />
       <workItem from="1682888259701" duration="104000" />
       <workItem from="1682929584668" duration="3873000" />
-      <workItem from="1682948192995" duration="6391000" />
+      <workItem from="1682948192995" duration="7142000" />
     </task>
     <task id="LOCAL-00001" summary="login feature executed">
       <created>1681594039220</created>
@@ -143,7 +137,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682888281763</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="connections feature updated">
+      <created>1682954809803</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682954809803</updated>
+    </task>
+    <task id="LOCAL-00008" summary="connections feature updated">
+      <created>1682954819280</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682954819280</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +174,7 @@
     <MESSAGE value="registration feature tested" />
     <MESSAGE value="connections feature created" />
     <MESSAGE value="connections feature updated and step definitions implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="connections feature updated and step definitions implemented" />
+    <MESSAGE value="connections feature updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="connections feature updated" />
   </component>
 </project>
