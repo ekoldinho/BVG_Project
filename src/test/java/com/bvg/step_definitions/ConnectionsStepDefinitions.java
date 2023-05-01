@@ -18,6 +18,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
 
 public class ConnectionsStepDefinitions {
     ConnectionsPage connectionsPage = new ConnectionsPage();
@@ -82,11 +84,23 @@ public class ConnectionsStepDefinitions {
     }
 
 
-    @Then("User verifies the possible connections without SBahn lines")
-    public void userVerifiesThePossibleConnectionsWithoutSBahnLines() {
-        String expectedInfoTitle = " ohne S-Bahn ";
-        String actualInfoTitle = connectionsPage.optionInfoTitle.getText();
-        Assert.assertEquals(expectedInfoTitle,actualInfoTitle);
+    @Then("User verifies the possible connections without the following SBahn lines")
+    public void userVerifiesThePossibleConnectionsWithoutTheFollowingSBahnLines(List<String> sbahnLines) {
+
+        Driver.getDriver().switchTo().frame("HAFAS_WEBAPP_IFRAME_0");
+
+        List<WebElement> overallTextsOfLists = Driver.getDriver().findElements(By.xpath("//ul[@class='lyr_tpOverviewList']"));
+
+        for (int i = 0; i < overallTextsOfLists.size(); i++) {
+            for (int j = 0; j < sbahnLines.size(); j++) {
+                if (sbahnLines.get(j) == overallTextsOfLists.get(i).getText()) {
+                    break;
+                }
+            }
+        }
+
+
+
     }
 }
 

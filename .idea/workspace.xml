@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ad3695b6-3a6c-41f2-9f16-637672e3ee62" name="Changes" comment="connections feature updated and step definitions implemented">
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bvg/pages/ConnectionsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bvg/pages/ConnectionsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bvg/step_definitions/ConnectionsStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bvg/step_definitions/ConnectionsStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/connections.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/connections.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/junit/junit-report.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/junit/junit-report.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/bvg/pages/ConnectionsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/bvg/pages/ConnectionsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/connections.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/connections.feature" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/com/bvg/pages/RegistrationPage.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/com/bvg/step_definitions/LoginStepDefinitions.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/com/bvg/utilities/BrowserUtils.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/resources/features/login.feature" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2OF5DzOiYpjV01wtUFgVa37hAUc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aliek/IdeaProjects/BVG_Project/src/test/java/com/bvg/step_definitions&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="CukesRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BVG_Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bvg.runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bvg.runners" />
+      <option name="MAIN_CLASS_NAME" value="com.bvg.runners.CukesRunner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CukesRunner" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad3695b6-3a6c-41f2-9f16-637672e3ee62" name="Changes" comment="" />
+      <created>1681143375782</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681143375782</updated>
+      <workItem from="1681143377324" duration="1743000" />
+      <workItem from="1681196985533" duration="5382000" />
+      <workItem from="1681249973699" duration="4295000" />
+      <workItem from="1681589722220" duration="8909000" />
+      <workItem from="1681600660015" duration="338000" />
+      <workItem from="1681658799970" duration="5344000" />
+      <workItem from="1682783950827" duration="3528000" />
+      <workItem from="1682861248280" duration="8787000" />
+      <workItem from="1682888259701" duration="104000" />
+      <workItem from="1682929584668" duration="3873000" />
+      <workItem from="1682948192995" duration="6391000" />
+    </task>
+    <task id="LOCAL-00001" summary="login feature executed">
+      <created>1681594039220</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681594039220</updated>
+    </task>
+    <task id="LOCAL-00002" summary="registration features file built up">
+      <created>1681600965345</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681600965345</updated>
+    </task>
+    <task id="LOCAL-00003" summary="registration feature tested">
+      <created>1681663946911</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681663946911</updated>
+    </task>
+    <task id="LOCAL-00004" summary="registration feature tested">
+      <created>1681664072472</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681664072472</updated>
+    </task>
+    <task id="LOCAL-00005" summary="connections feature created">
+      <created>1682888070187</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682888070187</updated>
+    </task>
+    <task id="LOCAL-00006" summary="connections feature updated and step definitions implemented">
+      <created>1682888281763</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682888281763</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="login feature executed" />
+    <MESSAGE value="registration features file built up" />
+    <MESSAGE value="registration feature tested" />
+    <MESSAGE value="connections feature created" />
+    <MESSAGE value="connections feature updated and step definitions implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="connections feature updated and step definitions implemented" />
+  </component>
+</project>

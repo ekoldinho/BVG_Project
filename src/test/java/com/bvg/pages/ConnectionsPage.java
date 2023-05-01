@@ -32,7 +32,7 @@ public class ConnectionsPage {
     @FindBy (xpath = "//input[@name='sbahn']")
     public WebElement sbahnOption;
 
-    @FindBy (xpath = "//span[@class='lyr_atomOptionInfoTitle']")
+    @FindBy (xpath = "//div[@class='lyr_atomOptionInfoText']")
     public WebElement optionInfoTitle;
 
 }
