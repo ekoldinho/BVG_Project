@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad3695b6-3a6c-41f2-9f16-637672e3ee62" name="Changes" comment="connections feature updated">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bvg/step_definitions/ConnectionsStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bvg/step_definitions/ConnectionsStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/connections.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/connections.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/junit/junit-report.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/junit/junit-report.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +97,8 @@
       <workItem from="1682861248280" duration="8787000" />
       <workItem from="1682888259701" duration="104000" />
       <workItem from="1682929584668" duration="3873000" />
-      <workItem from="1682948192995" duration="7142000" />
+      <workItem from="1682948192995" duration="7367000" />
+      <workItem from="1683463059406" duration="1517000" />
     </task>
     <task id="LOCAL-00001" summary="login feature executed">
       <created>1681594039220</created>
@@ -151,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682954819280</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="connections feature updated">
+      <created>1682955363340</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682955363340</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -49,6 +49,7 @@ public class ConnectionsStepDefinitions {
 
     @Then("User verifies the possible connections")
     public void userVerifiesThePossibleConnections() {
+        Driver.getDriver().switchTo().frame("HAFAS_WEBAPP_IFRAME_0");
         Assert.assertTrue(connectionsPage.connectionsList.isDisplayed());
     }
 
@@ -101,6 +102,22 @@ public class ConnectionsStepDefinitions {
 
 
 
+    }
+
+    @When("User inserts the following invalid start address {string}")
+    public void userInsertsTheFollowingInvalidStartAddress(String invalidStartAddress) {
+        connectionsPage.startAddressButton.sendKeys(invalidStartAddress);
+    }
+
+    @And("User inserts the following invalid ziel address {string}")
+    public void userInsertsTheFollowingInvalidZielAddress(String invalidZielAddress) {
+        connectionsPage.zielAddressButton.sendKeys(invalidZielAddress);
+    }
+
+    @Then("User does not verify a list of connections")
+    public void userDoesNotVerifyAListOfConnections() {
+        Driver.getDriver().switchTo().frame("HAFAS_WEBAPP_IFRAME_0");
+        Assert.assertFalse(connectionsPage.connectionsList.isDisplayed());
     }
 }
 

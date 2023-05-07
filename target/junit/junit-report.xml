@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="24.647">
-    <testcase classname="User searches for connections throughout Berlin" name="User can list connections without SBahn options after inserting valid addresses in Berlin" time="24.405">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="65.946">
+    <testcase classname="User searches for connections throughout Berlin" name="User can list connections after inserting valid addresses in Berlin" time="20.486">
+        <system-out>
+            <![CDATA[Given user is on main page..................................................passed
+When User inserts the following start address "Holzmarkt Straße 15-17"......passed
+And User inserts the following ziel address "Europaplatz 1".................passed
+And User clicks on Verbindung Finden button.................................passed
+Then User verifies the possible connections.................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="User searches for connections throughout Berlin" name="User can list connections without SBahn options after inserting valid addresses in Berlin" time="25.185">
         <system-out>
             <![CDATA[Given user is on main page..................................................passed
 When User inserts the following start address "Holzmarkt Straße 15-17"......passed
@@ -9,8 +19,27 @@ And User opens Erweiterte list..............................................pass
 And User deselects SBahn....................................................passed
 And User closes Erweiterte list.............................................passed
 And User clicks on Verbindung Finden button.................................passed
-Then User verifies the possible connections without SBahn lines.............passed
+Then User verifies the possible connections without the following SBahn lines.passed
 ]]>
         </system-out>
+    </testcase>
+    <testcase classname="User searches for connections throughout Berlin" name="User cannot list connections after inserting invalid addresses in Berlin" time="19.997">
+        <failure message="" type="java.lang.AssertionError">
+            <![CDATA[Given user is on main page..................................................passed
+When User inserts the following invalid start address "Trankgasse 11".......passed
+And User inserts the following invalid ziel address "Willy-Brandt-Platz 2"..passed
+And User clicks on Verbindung Finden button.................................passed
+Then User does not verify a list of connections.............................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at com.bvg.step_definitions.ConnectionsStepDefinitions.userDoesNotVerifyAListOfConnections(ConnectionsStepDefinitions.java:120)
+	at ✽.User does not verify a list of connections(file:///C:/Users/aliek/IdeaProjects/BVG_Project/src/test/resources/features/connections.feature:43)
+]]>
+        </failure>
     </testcase>
 </testsuite>
