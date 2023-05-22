@@ -1,4 +1,4 @@
-
+@wip
 Feature: User searches for connections throughout Berlin
 
   Background:
@@ -10,7 +10,7 @@ Feature: User searches for connections throughout Berlin
       And User clicks on Verbindung Finden button
       Then User verifies the possible connections
 
-  @wip
+
     Scenario: User can list connections without SBahn options after inserting valid addresses in Berlin
       When User inserts the following start address "Holzmarkt Straße 15-17"
       And User inserts the following ziel address "Europaplatz 1"
@@ -18,7 +18,7 @@ Feature: User searches for connections throughout Berlin
       And User deselects SBahn
       And User closes Erweiterte list
       And User clicks on Verbindung Finden button
-      Then User verifies the possible connections without SBahn lines
+      Then User verifies the possible connections without the following SBahn lines
         | S1  |
         | S2  |
         | S25 |
@@ -35,3 +35,21 @@ Feature: User searches for connections throughout Berlin
         | S8  |
         | S85 |
         | S9  |
+
+    Scenario: User cannot list connections after inserting invalid addresses in Berlin
+      When User inserts the following invalid start address "Trankgasse 11"
+      And User inserts the following invalid ziel address "Willy-Brandt-Platz 2"
+      And User clicks on Verbindung Finden button
+      Then User does not verify a list of connections
+
+
+
+
+
+
+
+
+
+
+
+
